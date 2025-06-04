@@ -2,12 +2,12 @@
 
 namespace ProductManagement.Middlewares
 {
-    public class RequestLoggingMiddleware
+    public class RequestMiddleware
     {
         private readonly RequestDelegate _next;
-        private readonly ILogger<RequestLoggingMiddleware> _logger;
+        private readonly ILogger<RequestMiddleware> _logger;
 
-        public RequestLoggingMiddleware(RequestDelegate next, ILogger<RequestLoggingMiddleware> logger)
+        public RequestMiddleware(RequestDelegate next, ILogger<RequestMiddleware> logger)
         {
             _next = next;
             _logger = logger;
